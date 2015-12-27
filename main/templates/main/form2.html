@@ -1,0 +1,47 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link href="{% static 'main/css/prism.css' %}" rel="stylesheet">
+        <link href="{% static 'main/css/ghpages-materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+        <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+</html>
+<body>
+    <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel teal">
+          <span class="white-text">
+              Hamdi Ahmadi Muzakkiy - 5112100091
+          </span>
+        </div>
+      </div>
+    </div>
+    <form action="{% url 'main:makeGraph'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="file-field input-field col s10">
+              <div class="btn">
+                <span>Event Log</span>
+                <input type="file" name = "files">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+              <button style="float:right" class="waves-effect waves-light btn-large">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+<script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }</script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    <script src="{% static 'main/js/jquery.timeago.min.js' %}"></script>
+    <script src="{% static 'main/js/prism.js' %}"></script>
+    <script src="{% static 'main/jade/lunr.min.js' %}"></script>
+    <script src="{% static 'main/jade/search.js' %}"></script>
+    <script src="{% static 'main/bin/materialize.js' %}"></script>
+    <script src="{% static 'main/js/init.js' %}"></script>
+</script>
+
+</body>

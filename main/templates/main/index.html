@@ -1,0 +1,8 @@
+
+{% for graph, value in list_graph.items %}
+    {{graph}}-{{value}}
+    {% for output in value.output %}
+        {{output}}
+    {% endfor %}
+    <br>
+{% endfor %}

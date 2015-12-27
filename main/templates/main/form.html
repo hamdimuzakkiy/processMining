@@ -1,0 +1,5 @@
+<form action="{% url 'main:makeGraph'%}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name = "files">
+    <button>Submit</button>
+</form>
