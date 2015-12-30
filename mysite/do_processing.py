@@ -23,4 +23,6 @@ def makeGraph(file):
     return graph
 
 # if __name__ == '__main__':
-
+#     grph = makeGraph('../uploads/EventLogTA-ModifiedTimeBasedHeuristicMiner.xlsx')
+#     for x in grph:
+#         print x,grph[x]
